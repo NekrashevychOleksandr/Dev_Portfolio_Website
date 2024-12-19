@@ -1,0 +1,35 @@
+<header>
+  <app-header></app-header>
+</header>
+
+<main class="main">
+  <section id="introduction">
+    <h1>Welcome to My Portfolio</h1>
+    <p>I'm [Your Name], a [Your Profession/Role]. Here’s a brief overview of my skills and projects.</p>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <!-- Skills representation (icons, progress bars, etc.) -->
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="project-list">
+      <div class="project-item">
+        <img src="path/to/project-image.jpg" alt="Project Title">
+        <h3>Project Title</h3>
+        <p>Brief description of the project.</p>
+        <a routerLink="/project-demo">View Demo</a>
+      </div>
+      <!-- Repeat for more projects -->
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <p>If you'd like to get in touch, please visit my <a routerLink="/contact">Contact Me</a> page.</p>
+  </section>
+</main>
+
+<router-outlet></router-outlet>
