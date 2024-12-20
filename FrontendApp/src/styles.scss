@@ -1,0 +1,8 @@
+$background-image-path: '../public/images/background.jpeg';
+
+body {
+    padding: 60px 0 0; /* Add padding to prevent overlap with fixed header */
+    background-image: url($background-image-path); /* Ensure this path is correct */
+    background-size: cover; /* Ensure the background covers the body */
+    background-repeat: no-repeat; /* Do not repeat the background image */
+}

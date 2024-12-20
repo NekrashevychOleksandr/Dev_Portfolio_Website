@@ -1,0 +1,47 @@
+
+<header class="header">
+
+    <div class="header-container">
+        <!-- Logo Section -->
+        <div class="logo-container">
+            <a class="logo" href="#home">
+                <img src="images/logo.png" alt="Oleksandr Nekrashevych Logo">
+            </a>
+        </div>
+
+        <!-- Navigation Section -->
+        <nav role="navigation">
+            <ul [class.active]="isMenuOpen" class="nav-list">
+              <li class="nav-item"><a href="#home">Home</a></li>
+              <li class="nav-item"><a href="#about">About</a></li>
+              <li class="nav-item"><a href="#projects">Projects</a></li>
+              <li class="nav-item"><a href="#skills">Skills</a></li>
+              <li class="nav-item"><a href="#resume">Resume</a></li>
+              <li class="nav-item"><a href="#contact">Contact</a></li>
+            </ul>
+          </nav>
+
+        <!-- Social Media Icons -->
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/in/your-profile" target="_blank" aria-label="LinkedIn">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/your-profile" target="_blank" aria-label="GitHub">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://stackoverflow.com/users/your-user-id" target="_blank" aria-label="Stack Overflow">
+                <i class="fab fa-stack-overflow"></i>
+            </a>
+            <a href="https://www.upwork.com/freelancers/~your-profile" target="_blank" aria-label="UpWork">UpWork</a>
+        </div>
+
+        <!-- Burger Menu Button -->
+        <button class="burger-menu" aria-label="Toggle navigation" (click)="toggleMenu()">
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+        </button>
+
+    </div>
+
+</header>

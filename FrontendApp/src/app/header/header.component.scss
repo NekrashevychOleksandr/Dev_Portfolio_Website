@@ -1,0 +1,181 @@
+html, body {
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    width: 100%; /* Ensure full width */
+    height: 100%; /* Ensure full height */
+    
+}
+
+.header {
+    position: fixed; /* Keeps the header at the top */
+    top: 0;
+    left: 0; /* Align to the left */
+    right: 0; /* Align to the right */
+    background-image: url('../../../public/images/marble.jpg'); /* Adjust the path accordingly */
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 1000; /* Ensure it stays above other elements */
+    height: 60px; /* Set a specific height for the header */
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Center items vertically */
+    justify-content: space-between; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8); /* Adds shadow below the navbar */
+    font-family: 'Montserrat', sans-serif;
+}
+
+.header::before {
+    content: ''; /* Create a pseudo-element */
+    position: absolute; /* Position it absolutely within the header */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.05); /* Semi-transparent white overlay */
+    z-index: -1; /* Place it behind the content */
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between; /* Spread items out */
+    align-items: center;
+    width: 100%; /* Full width */
+    max-width: 1200px; /* Optional: Set a max width for the header */
+    margin: 0 auto; /* Center header if max width is used */
+    padding: 0 20px; /* Padding on sides */
+    
+}
+
+.logo-container {
+    margin: 0; /* Remove margin around logo container */
+    padding: 0; /* Remove padding around logo container */
+    display: flex; /* Use flexbox to arrange logo and text */    
+}
+
+.logo-container:hover img {
+    transform: scale(1.1); /* Slight zoom effect */
+    transition: transform 0.3s ease;
+}
+
+.burger-button {
+    display: none; /* Initially hide the button */
+    font-size: 30px; /* Adjust size */
+    background: none; /* No background */
+    border: none; /* No border */
+    color: navy; /* Button color */
+    cursor: pointer; /* Pointer cursor on hover */
+    
+}
+
+.nav-list {
+    list-style: none;
+    display: flex; /* Arrange nav items in a row */
+    align-items: center; /* Center items */
+    padding: 0; /* Remove padding from the list */
+    margin: 0; /* Remove margin from the list */
+    font-size: 20px; /* Increase font size for nav items */
+    flex-wrap: nowrap; /* Prevent wrapping */
+    margin-top: 14px; /* Adjust as needed */
+    
+}
+
+.nav-list.active {
+    display: flex; /* Show the menu when active */
+    align-items: center; /* Center items */
+  }
+
+.nav-item {
+    margin-left: 10px; /* Adjust spacing between nav items */
+}
+
+.nav-item a {
+    color: navy; /* Text color */
+    text-decoration: none; /* Remove underline */
+    padding: 10px 15px; /* Add some padding for better click area */
+    transition: color 0.3s ease; /* Smooth transition for text color change */
+    align-items: center; /* Center items */
+}
+
+.nav-item a:hover {
+    color: gold; /* Change color on hover */
+}
+
+.logo img {
+    width: 50px; /* Set to desired size */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.social-icons {
+    display: flex; /* Arrange icons in a row */
+    align-items: center; /* Center vertically */
+    margin: 0;
+    padding: 0;
+    font-weight: 700; /* Make text bold */
+    font-family: 'Poppins', sans-serif; /* Use Poppins for Upwork link */
+    font-size: 20px; /* Increase icon size */
+}
+
+.social-icons a {
+    color: navy; /* Link color */
+    text-decoration: none; /* Remove underline */
+    padding: 10px 15px; /* Padding for click area */
+    transition: color 0.3s ease; /* Smooth color change on hover */
+}
+
+.social-icons a:hover {
+    color: gold; /* Change color on hover */
+}
+
+.social-links {
+    display: flex; /* Aligns links in a row */
+    gap: 15px; /* Space between links */
+}
+
+.burger-menu {
+    display: none; /* Initially hidden */
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.burger-line {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: navy; /* Color for the burger lines */
+    margin: 5px 0; /* Space between lines */
+    transition: all 0.3s ease; /* Smooth transition */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1000px) {
+    .header {
+        height: auto; /* Allow height to adjust based on content */
+        padding: 10px 20px; /* Add padding for smaller screens */
+    }
+
+    .burger-menu {
+        display: block; /* Show burger menu on small screens */
+    }
+
+    .nav-list {
+        display: none; /* Hide nav items by default on small screens */
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items */
+        position: absolute; /* Position the dropdown */
+        top: 60px; /* Position it just below the header */
+        left: 0;
+        right: 0;
+        background: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+        z-index: 1001; /* Ensure it stays above other elements */
+    }
+
+    .burger-button {
+        display: block; /* Show the button on small screens */
+    }
+
+    .nav-list.show {
+        display: flex; /* Show menu when toggled */
+    }
+}
