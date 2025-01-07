@@ -68,13 +68,13 @@ html, body {
 
 .nav-list {
     list-style: none;
+    white-space: nowrap;
     display: flex; /* Arrange nav items in a row */
     align-items: center; /* Center items */
     padding: 0; /* Remove padding from the list */
     margin: 0; /* Remove margin from the list */
     font-size: 20px; /* Increase font size for nav items */
     flex-wrap: nowrap; /* Prevent wrapping */
-    margin-top: 14px; /* Adjust as needed */
     
 }
 
@@ -111,7 +111,7 @@ html, body {
     padding: 0;
     font-weight: 700; /* Make text bold */
     font-family: 'Poppins', sans-serif; /* Use Poppins for Upwork link */
-    font-size: 20px; /* Increase icon size */
+    font-size: 30px; /* Increase icon size */
 }
 
 .social-icons a {
@@ -163,7 +163,7 @@ html, body {
         flex-direction: column; /* Stack items vertically */
         align-items: center; /* Center items */
         position: absolute; /* Position the dropdown */
-        top: 60px; /* Position it just below the header */
+        top: 85px; /* Position it just below the header */
         left: 0;
         right: 0;
         background: rgba(255, 255, 255, 0.9); /* Semi-transparent background */

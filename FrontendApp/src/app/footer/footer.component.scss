@@ -1,0 +1,53 @@
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%; /* Full height for the HTML and body */
+}
+
+body {
+    display: flex;
+    flex-direction: column; /* Stack content and footer vertically */
+    min-height: 100vh; /* Ensure the body spans the full height of the viewport */
+}
+
+/* Main content area */
+main {
+    flex: 1; /* Push the footer to the bottom if content is short */
+}
+
+
+footer {
+    background-color: #002855; /* Deep blue background */
+    color: #fff; /* White text color */
+    padding: 30px 20px; /* Add more padding for a spacious feel */
+    text-align: center; /* Center-align text */
+    width: 100%; /* Full width */
+    border-top: 5px solid #d4af37; /* Gold border for elegance */
+    margin-top: 20px; /* Space above footer */
+}
+
+/* Footer styling */
+footer {
+    background-color: #002855; 
+    color: #fff;
+    text-align: center;
+    padding: 10px 20px;
+    border-top: 5px solid #d4af37; /* Gold border for elegance */
+    margin-top: 20px; /* Space above footer */
+}
+
+.footer-content a {
+    color: #d4af37; /* Gold for links */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.footer-content a:hover {
+    color: #fff; /* Change link color to white on hover */
+    text-decoration: underline; /* Add underline on hover */
+}
