@@ -2,8 +2,7 @@ html, body {
     margin: 0; /* Remove default margin */
     padding: 0; /* Remove default padding */
     width: 100%; /* Ensure full width */
-    height: 100%; /* Ensure full height */
-    
+    height: 100%; /* Ensure full height */   
 }
 
 .header {
@@ -37,12 +36,11 @@ html, body {
 .header-container {
     display: flex;
     justify-content: space-between; /* Spread items out */
-    align-items: center;
+    align-items: center; /* Center items vertically */
     width: 100%; /* Full width */
     max-width: 1200px; /* Optional: Set a max width for the header */
     margin: 0 auto; /* Center header if max width is used */
     padding: 0 20px; /* Padding on sides */
-    
 }
 
 .logo-container {
@@ -63,7 +61,6 @@ html, body {
     border: none; /* No border */
     color: navy; /* Button color */
     cursor: pointer; /* Pointer cursor on hover */
-    
 }
 
 .nav-list {
@@ -73,15 +70,14 @@ html, body {
     align-items: center; /* Center items */
     padding: 0; /* Remove padding from the list */
     margin: 0; /* Remove margin from the list */
-    font-size: 20px; /* Increase font size for nav items */
+    font-size: 18px; /* Increase font size for nav items */
     flex-wrap: nowrap; /* Prevent wrapping */
-    
 }
 
 .nav-list.active {
     display: flex; /* Show the menu when active */
     align-items: center; /* Center items */
-  }
+}
 
 .nav-item {
     margin-left: 10px; /* Adjust spacing between nav items */
@@ -92,7 +88,6 @@ html, body {
     text-decoration: none; /* Remove underline */
     padding: 10px 15px; /* Add some padding for better click area */
     transition: color 0.3s ease; /* Smooth transition for text color change */
-    align-items: center; /* Center items */
 }
 
 .nav-item a:hover {
@@ -107,18 +102,18 @@ html, body {
 .social-icons {
     display: flex; /* Arrange icons in a row */
     align-items: center; /* Center vertically */
-    margin: 0;
-    padding: 0;
-    font-weight: 700; /* Make text bold */
-    font-family: 'Poppins', sans-serif; /* Use Poppins for Upwork link */
-    font-size: 30px; /* Increase icon size */
+    margin: 0; /* Reset margin */
+    padding: 0; /* Reset padding */
 }
 
 .social-icons a {
     color: navy; /* Link color */
     text-decoration: none; /* Remove underline */
-    padding: 10px 15px; /* Padding for click area */
+    padding: 0px 15px; /* Padding for click area */
     transition: color 0.3s ease; /* Smooth color change on hover */
+    font-weight: 700; /* Make text bold */
+    font-family: 'Poppins', sans-serif; /* Use Poppins for Upwork link */
+    font-size: 30px; /* Increase icon size */
 }
 
 .social-icons a:hover {
@@ -148,10 +143,10 @@ html, body {
 }
 
 /* Media Queries for Responsiveness */
-@media (max-width: 1000px) {
+@media (max-width: 1200px) {
     .header {
-        height: auto; /* Allow height to adjust based on content */
-        padding: 10px 20px; /* Add padding for smaller screens */
+        height: 60px; /* Allow height to adjust based on content */
+        align-items: flex-start; /* Align items to the start */
     }
 
     .burger-menu {
@@ -163,7 +158,7 @@ html, body {
         flex-direction: column; /* Stack items vertically */
         align-items: center; /* Center items */
         position: absolute; /* Position the dropdown */
-        top: 85px; /* Position it just below the header */
+        top: 60px; /* Position it just below the header */
         left: 0;
         right: 0;
         background: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
@@ -177,5 +172,12 @@ html, body {
 
     .nav-list.show {
         display: flex; /* Show menu when toggled */
+    }
+
+    /* Center social icons when the burger menu is displayed */
+    .social-icons {
+        margin-top: 10px; /* Add some space above the icons */
+        justify-content: center; /* Center icons horizontally */
+        width: 100%; /* Ensure full width for centering */
     }
 }
