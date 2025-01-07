@@ -14,7 +14,7 @@ html, body {
     background-size: cover;
     background-repeat: no-repeat;
     z-index: 1000; /* Ensure it stays above other elements */
-    height: 60px; /* Set a specific height for the header */
+    height: 70px; /* Set a specific height for the header */
     display: flex; /* Use flexbox for alignment */
     align-items: center; /* Center items vertically */
     justify-content: space-between; 
@@ -145,8 +145,9 @@ html, body {
 /* Media Queries for Responsiveness */
 @media (max-width: 1350px) {
     .header {
-        height: 60px; /* Allow height to adjust based on content */
+        height: 70px; /* Allow height to adjust based on content */
         align-items: flex-start; /* Align items to the start */
+        align-items: center; /* Center items */
     }
 
     .burger-menu {
