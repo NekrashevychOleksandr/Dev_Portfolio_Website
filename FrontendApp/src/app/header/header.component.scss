@@ -70,7 +70,7 @@ html, body {
     align-items: center; /* Center items */
     padding: 0; /* Remove padding from the list */
     margin: 0; /* Remove margin from the list */
-    font-size: 18px; /* Increase font size for nav items */
+    font-size: 20px; /* Increase font size for nav items */
     flex-wrap: nowrap; /* Prevent wrapping */
 }
 
@@ -143,7 +143,7 @@ html, body {
 }
 
 /* Media Queries for Responsiveness */
-@media (max-width: 1200px) {
+@media (max-width: 1350px) {
     .header {
         height: 60px; /* Allow height to adjust based on content */
         align-items: flex-start; /* Align items to the start */
