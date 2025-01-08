@@ -1,155 +1,126 @@
-$primary-color: #0d6efd; // Blue color
-$secondary-color: #fff; // White
-$accent-color: #ffd700; // Gold
-
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
+/* General Styles */
+section {
+    padding: 60px 20px;
+    text-align: center;
+    color: white;
+    position: relative;
+  }
+  
+h2 {
+font-size: 2.5rem;
+margin-bottom: 20px;
+color: gold;
 }
 
-.home-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 20px;
+/* Semi-transparent Gradient Overlay for Sections */
+.overlay {
+background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6));
+padding: 60px 20px;
+border-radius: 10px;
+backdrop-filter: blur(5px); /* Add slight blur for depth */
 }
 
+/* Hero Section */
 .hero-section {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
-    color: $secondary-color;
-    text-align: center;
-    padding: 100px 20px;
-
-    h1 {
-        font-size: 3rem;
-        margin: 0;
+padding: 100px 20px;
+h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+.cta-button {
+    background-color: gold;
+    border: none;
+    padding: 10px 20px;
+    color: navy;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    a {
+    color: navy;
+    text-decoration: none;
     }
-
-    p {
-        font-size: 1.2rem;
-        margin: 20px 0;
-    }
-
-    .cta-button {
-        background-color: $primary-color;
-        color: $secondary-color;
-        padding: 10px 20px;
-        text-decoration: none;
-        border-radius: 5px;
-        transition: background-color 0.3s;
-
-        &:hover {
-            background-color: darken($primary-color, 10%);
-        }
+    &:hover {
+    background-color: white;
+    color: navy;
     }
 }
-
-.about-section {
-    padding: 50px 20px;
-    text-align: center;
-
-    h2 {
-        font-size: 2.5rem;
-        margin-bottom: 20px;
-    }
-
-    .achievement {
-        background-color: $secondary-color;
-        padding: 20px;
-        border: 1px solid $primary-color;
-        border-radius: 5px;
-        margin-top: 20px;
-
-        h3 {
-            color: $primary-color;
-        }
-    }
 }
 
-.interactive-section {
-    padding: 50px 20px;
-    text-align: center;
-
-    h2 {
-        font-size: 2.5rem;
-        margin-bottom: 20px;
-    }
-
-    .cta-button {
-        background-color: $primary-color;
-        color: $secondary-color;
-        padding: 10px 20px;
-        text-decoration: none;
-        border-radius: 5px;
-        transition: background-color 0.3s;
-
-        &:hover {
-            background-color: darken($primary-color, 10%);
-        }
-    }
+/* About Me Section */
+.about-section p {
+font-size: 1.2rem;
+max-width: 800px;
+margin: 0 auto;
+line-height: 1.8;
 }
 
-.projects-section {
-    padding: 50px 20px;
-    text-align: center;
-
-    h2 {
-        font-size: 2.5rem;
-        margin-bottom: 20px;
-    }
-
-    .projects-container {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-
-        .project-card {
-            background-color: $secondary-color;
-            border: 1px solid $primary-color;
-            border-radius: 5px;
-            margin: 10px;
-            padding: 20px;
-            width: 300px;
-            text-align: left;
-
-            h3 {
-                color: $primary-color;
-            }
-
-            .project-link {
-                text-decoration: none;
-                color: $primary-color;
-                transition: color 0.3s;
-
-                &:hover {
-                    color: darken($primary-color, 10%);
-                }
-            }
-        }
+/* Gimmick Section */
+.gimmick-section .game-area {
+position: relative;
+height: 300px;
+border-radius: 10px;
+margin: 20px auto;
+overflow: hidden;
+.hidden-star {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    opacity: 0; /* Initially hidden */
+}
+}
+.gimmick-section .message {
+margin-top: 20px;
+font-size: 1.5rem;
+a {
+    color: gold;
+    text-decoration: underline;
+    &:hover {
+    color: white;
     }
 }
-
-footer {
-    background-color: #f8f9fa;
-    padding: 20px;
-    text-align: center;
-    width: 100%;
-    margin-top: auto;
-
-    .footer-content {
-        color: #333;
-
-        .copyright {
-            margin-bottom: 10px;
-        }
-
-        a {
-            color: $primary-color;
-            text-decoration: none;
-
-            &:hover {
-                text-decoration: underline;
-            }
-        }
-    }
+&.hidden {
+    display: none; /* Hide message by default */
 }
+}
+
+/* Achievements Section */
+.achievements-section ul {
+list-style: none;
+padding: 0;
+li {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    color: gold;
+}
+}
+
+/* Contact Call-to-Action */
+.contact-cta h2 {
+margin-bottom: 20px;
+}
+.contact-cta .cta-button {
+background-color: gold;
+border: none;
+padding: 10px 20px;
+color: navy;
+font-size: 1rem;
+border-radius: 5px;
+cursor: pointer;
+a {
+    color: navy;
+    text-decoration: none;
+}
+&:hover {
+    background-color: white;
+    color: navy;
+}
+}
+
