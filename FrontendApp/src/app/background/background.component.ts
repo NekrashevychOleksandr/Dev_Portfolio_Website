@@ -123,7 +123,7 @@ export class NeuralBackgroundComponent implements OnInit {
     this.ctx.closePath();
 
     // Update pulse size
-    signal.pulse += 0.2; // Control the speed of the pulse effect
+    signal.pulse += 0.13; // Control the speed of the pulse effect
   }
 
   private animate(): void {
@@ -133,7 +133,7 @@ export class NeuralBackgroundComponent implements OnInit {
     this.nodes.forEach((node) => this.drawNode(node)); // Draw nodes with pulsing effect
 
     this.signalPaths.forEach((signal, index) => {
-      signal.progress += 0.05; // Increase speed of the signals
+      signal.progress += 0.25; // Increase speed of the signals
       if (signal.progress >= 1) {
         this.signalPaths.splice(index, 1); // Remove the signal once it reaches the end
       }
@@ -145,12 +145,12 @@ export class NeuralBackgroundComponent implements OnInit {
 
   private startSignalGeneration(): void {
     this.signalInterval = setInterval(() => {
-      const signalsToCreate = Math.floor(Math.random() * 3) + 1; // 1 to 3 signals
+      const signalsToCreate = Math.floor(Math.random() * 10) + 1; // 1 to 3 signals
       for (let i = 0; i < signalsToCreate; i++) {
         if (this.signalPaths.length < 3) { // Ensure only a maximum of 3 signals
           this.signalPaths.push(this.createSignal());
         }
       }     
-    }, 5000); // Create signals every 5 seconds
+    }, 3000); // Create signals every 5 seconds
   }
 }

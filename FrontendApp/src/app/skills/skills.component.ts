@@ -2,16 +2,30 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-contact',
+  selector: 'app-skills',
   standalone: true,
-  templateUrl: './contact.component.html',
-  styleUrls: ['./contact.component.scss'],
+  templateUrl: './skills.component.html',
+  styleUrls: ['./skills.component.scss'],
 })
-export class ContactComponent {
+export class SkillsComponent {
+  skills: string[] = [
+    'Angular',
+    'TypeScript',
+    'JavaScript',
+    'HTML',
+    'CSS/SCSS',
+    'Node.js',
+    'Express',
+    'MongoDB',
+    'Git/GitHub',
+    'RESTful APIs',
+    'UI/UX Design',
+  ];
+
   constructor(private router: Router) {}
 
   navigate(direction: 'prev' | 'next'): void {
-    const routes = ['', 'about', 'projects','achievements', 'skills', 'resume', 'contact']; // Define available components/routes
+    const routes = ['', 'about', 'projects','achievements', 'skills', 'resume', 'contact'];
     const currentIndex = routes.indexOf(this.router.url.replace('/', ''));
     const nextIndex =
       direction === 'next'

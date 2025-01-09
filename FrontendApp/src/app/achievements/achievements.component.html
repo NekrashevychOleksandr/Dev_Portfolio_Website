@@ -1,0 +1,16 @@
+<section id="achievements" class="achievements-section">
+    <button class="nav-button left" (click)="navigate('prev')">&lt;</button>
+  
+    <div class="achievements-container">
+      <h1>Achievements</h1>
+      <ul>
+        <li *ngFor="let achievement of achievements">
+          <h3>{{ achievement.title }}</h3>
+          <p>{{ achievement.description }}</p>
+        </li>
+      </ul>
+    </div>
+  
+    <button class="nav-button right" (click)="navigate('next')">&gt;</button>
+  </section>
+  

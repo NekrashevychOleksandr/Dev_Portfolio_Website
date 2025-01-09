@@ -1,34 +1,18 @@
-
 <section id="home" class="home-section">
-    <!-- Hero Section -->
-    <div class="hero-section">
-      <h1>Welcome to My Portfolio</h1>
-      <p>Software Engineer</p>
-      <button class="cta-button"><a routerLink="/projects">Explore My Work</a></button>
-    </div>
-  
-    <!-- About Me Section -->
-    <section id="about" class="about-section">
-      <h2>About Me</h2>
-      <p>
-        Hi, I'm Oleksandr Nekrashevych, a passionate software engineer specializing in creating impactful solutions. With a love for clean code and innovative design, I bring ideas to life through technology.
-      </p>
-    </section>
-  
-    <!-- Achievements Section -->
-    <section id="achievements" class="achievements-section">
-      <h2>Achievements</h2>
-      <ul>
-        <li>🏆 Winner of [Hackathon Name]</li>
-        <li>🌟 Published [Project/Article Name]</li>
-        <li>💼 [Other Achievement]</li>
-      </ul>
-    </section>
-  
-    <!-- Call-to-Action -->
-    <section id="contact-cta" class="contact-cta">
-      <h2>Let's Connect</h2>
-      <button class="cta-button"><a routerLink="/contact">Get in Touch</a></button>
-    </section>
-  </section>
-  
+  <!-- Left Navigation Button -->
+  <button class="nav-button left" (click)="navigate('prev')">
+    &#10094; <!-- Left Arrow -->
+  </button>
+
+  <!-- Hero Section -->
+  <div class="hero-section">
+    <h1>Welcome to My Portfolio</h1>
+    <p>Software Engineer</p>
+    <button class="cta-button"><a routerLink="/projects">Explore My Work</a></button>
+  </div>
+
+  <!-- Right Navigation Button -->
+  <button class="nav-button right" (click)="navigate('next')">
+    &#10095; <!-- Right Arrow -->
+  </button>
+</section>

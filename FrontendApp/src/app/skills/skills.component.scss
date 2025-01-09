@@ -1,0 +1,86 @@
+:host {
+    display: block;
+    background-color: rgba(0, 0, 0, 0.5);
+    margin: 40px 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+.skills-section {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: rgba(0, 0, 0, 0.6); // Transparent black background
+    color: #fff;
+    text-align: center;
+    padding: 2rem;
+  
+    .skills-container {
+      max-width: 700px;
+      background: rgba(255, 255, 255, 0.1); // Slightly transparent white
+      border-radius: 10px;
+      padding: 2rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  
+      h1 {
+        margin-bottom: 1.5rem;
+        font-size: 2rem;
+        color: gold;
+      }
+  
+      p {
+        margin-bottom: 1.5rem;
+        font-size: 1.2rem;
+        color: #ccc;
+      }
+  
+      ul {
+        list-style: none;
+        padding: 0;
+  
+        li {
+          margin: 0.5rem 0;
+          padding: 0.5rem;
+          background: rgba(255, 255, 255, 0.2); // Highlighted background
+          border-radius: 5px;
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+          color: #fff;
+          font-size: 1.1rem;
+          font-weight: bold;
+        }
+      }
+    }
+  
+    .nav-button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0, 0, 0, 0.8);
+      border: none;
+      color: #fff;
+      font-size: 2rem;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+      transition: background 0.3s;
+  
+      &.left {
+        left: 2rem;
+      }
+  
+      &.right {
+        right: 2rem;
+      }
+  
+      &:hover {
+        background: gold;
+        color: #000;
+      }
+    }
+  }
+  

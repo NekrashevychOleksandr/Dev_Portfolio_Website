@@ -1,0 +1,36 @@
+<section id="about" class="about-section">
+    <!-- Left Navigation Button -->
+    <button class="nav-button left" (click)="navigate('prev')">
+      &#x276E;
+    </button>
+  
+    <!-- About Content -->
+    <div class="about-container">
+      <h2>About Me</h2>
+      <p class="about-description">
+        Hello! I'm a passionate software engineer with expertise in developing elegant, efficient, and scalable solutions. I thrive on solving complex problems and delivering high-quality products.
+      </p>
+  
+      <div class="about-details">
+        <div class="skills">
+          <h3>Skills</h3>
+          <ul>
+            <li *ngFor="let skill of skills">{{ skill }}</li>
+          </ul>
+        </div>
+  
+        <div class="bio">
+          <h3>Biography</h3>
+          <p>
+            I have a background in computer science and have worked on a variety of exciting projects in web development, machine learning, and mobile applications. When I'm not coding, you can find me exploring new technologies, hiking, or reading.
+          </p>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Right Navigation Button -->
+    <button class="nav-button right" (click)="navigate('next')">
+      &#x276F;
+    </button>
+  </section>
+  

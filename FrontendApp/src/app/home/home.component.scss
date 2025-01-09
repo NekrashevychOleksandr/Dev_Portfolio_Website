@@ -1,126 +1,72 @@
-/* General Styles */
-section {
-    padding: 60px 20px;
-    text-align: center;
-    color: white;
+
+:host {
+    display: block;
+    background-color: rgba(0, 0, 0, 0.5);
+    margin: 40px 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.home-section {
     position: relative;
+    text-align: center;
+    padding: 20px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    .hero-section {
+      z-index: 1;
+      color: white;
+      text-align: center;
+  
+      h1 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+      }
+  
+      p {
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+      }
+  
+      .cta-button a {
+        text-decoration: none;
+        color: white;
+        padding: 10px 20px;
+        background-color: #007bff;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+      }
+  
+      .cta-button a:hover {
+        background-color: #0056b3;
+      }
+    }
+  
+    .nav-button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 2rem;
+      color: white;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      z-index: 2;
+  
+      &:hover {
+        color: #007bff;
+      }
+  
+      &.left {
+        left: 20px;
+      }
+  
+      &.right {
+        right: 20px;
+      }
+    }
   }
   
-h2 {
-font-size: 2.5rem;
-margin-bottom: 20px;
-color: gold;
-}
-
-/* Semi-transparent Gradient Overlay for Sections */
-.overlay {
-background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6));
-padding: 60px 20px;
-border-radius: 10px;
-backdrop-filter: blur(5px); /* Add slight blur for depth */
-}
-
-/* Hero Section */
-.hero-section {
-padding: 100px 20px;
-h1 {
-    font-size: 3rem;
-    margin-bottom: 10px;
-}
-p {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-}
-.cta-button {
-    background-color: gold;
-    border: none;
-    padding: 10px 20px;
-    color: navy;
-    font-size: 1rem;
-    border-radius: 5px;
-    cursor: pointer;
-    a {
-    color: navy;
-    text-decoration: none;
-    }
-    &:hover {
-    background-color: white;
-    color: navy;
-    }
-}
-}
-
-/* About Me Section */
-.about-section p {
-font-size: 1.2rem;
-max-width: 800px;
-margin: 0 auto;
-line-height: 1.8;
-}
-
-/* Gimmick Section */
-.gimmick-section .game-area {
-position: relative;
-height: 300px;
-border-radius: 10px;
-margin: 20px auto;
-overflow: hidden;
-.hidden-star {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 50px;
-    height: 50px;
-    cursor: pointer;
-    opacity: 0; /* Initially hidden */
-}
-}
-.gimmick-section .message {
-margin-top: 20px;
-font-size: 1.5rem;
-a {
-    color: gold;
-    text-decoration: underline;
-    &:hover {
-    color: white;
-    }
-}
-&.hidden {
-    display: none; /* Hide message by default */
-}
-}
-
-/* Achievements Section */
-.achievements-section ul {
-list-style: none;
-padding: 0;
-li {
-    font-size: 1.2rem;
-    margin: 10px 0;
-    color: gold;
-}
-}
-
-/* Contact Call-to-Action */
-.contact-cta h2 {
-margin-bottom: 20px;
-}
-.contact-cta .cta-button {
-background-color: gold;
-border: none;
-padding: 10px 20px;
-color: navy;
-font-size: 1rem;
-border-radius: 5px;
-cursor: pointer;
-a {
-    color: navy;
-    text-decoration: none;
-}
-&:hover {
-    background-color: white;
-    color: navy;
-}
-}
-

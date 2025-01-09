@@ -2,4 +2,27 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
+  }
+  
+  body, html {
+    height: 100%;
+  }
+  
+  :host {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  main {
+    flex: 1; /* Ensures the main content takes up the remaining space */
+    display: flex;
+    flex-direction: column;
+  }
+  
+  footer {
+    position: relative; /* Ensures it doesn't overlap other elements */
+    bottom: 0;
+    width: 100%;
+  }
+  

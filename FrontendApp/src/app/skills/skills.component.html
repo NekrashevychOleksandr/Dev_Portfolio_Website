@@ -1,0 +1,14 @@
+<section id="skills" class="skills-section">
+    <button class="nav-button left" (click)="navigate('prev')">&lt;</button>
+  
+    <div class="skills-container">
+      <h1>Skills</h1>
+      <p>Here are some of the skills I bring to the table:</p>
+      <ul>
+        <li *ngFor="let skill of skills">{{ skill }}</li>
+      </ul>
+    </div>
+  
+    <button class="nav-button right" (click)="navigate('next')">&gt;</button>
+  </section>
+  
